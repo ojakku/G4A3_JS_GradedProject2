@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resume</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <button type="button">Previous</button>
+        <input type="text" id="filter" name="filter" placeholder="Search for Keywords to Filter">
+        <button type="button">Next</button>
+        <div style="border: solid;">
+            <div style="height: 8rem; display: flex; flex-direction: row;">
+                <div style="width: 80%; border: solid red;">
+                    <h1 id="name"></h1>
+                    <br>
+                    <h3 id="applied">Applied For : </h3>
+                </div>
+                <div style="width: 20%; border: solid blue;">
+                    <img src="test.png" width="40%" height="100%">
+                </div>
+            </div>
+            <div style="height: 35rem; display: flex; flex-direction: row; border: solid green;">
+                <div style="width: 15%;height: fit-content; border: solid blue; flex-direction: column; padding: 1rem; background: lightpink;">
+                    <div style="background: grey; height : 2rem;">
+                    </div>
+                    <div style="height : 5rem;">
+                    </div>
+                    <div style="background: grey; height : 2rem;">
+                    </div>
+                    <div style="height : 5rem;">
+                    </div>
+                    <div style="background: grey; height : 2rem;">
+                    </div>
+                    <div style="height : 5rem;">
+                    </div>
+                </div>
+                <div style="width: 85%; border: solid red; flex-direction: column; padding: 0.5rem;">
+                    <div style=" none: solid; margin: 0.5rem; height: 10rem;">
+                        Work
+                    </div>
+                    <div style="border: none; margin: 0.5rem; height: 6rem;">
+                        Project
+                    </div>
+                    <div style="border: none; margin: 0.5rem; height: 5rem;">
+                        Education
+                    </div>
+                    <div style="border: none; margin: 0.5rem; height: 7rem;">
+                        Internship
+                    </div>
+                    <div style="border:  none; margin: 0.5rem;">
+                        Achievements
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="" async defer></script> -->
+        <script >
+            fetch('./Data.json')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                });
+        </script>
+    </body>
+</html>
